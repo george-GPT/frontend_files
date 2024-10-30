@@ -1,0 +1,71 @@
+/* Index.css */
+
+/* CSS Reset - to ensure consistency across different browsers */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font properties for the entire app */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Default text color */
+}
+
+/* Set base styles for body and main container */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container to align all app content */
+#root {
+  width: 100%;
+  max-width: 1200px; /* Limit the width for larger screens */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Global styles for headings and paragraphs */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Link styling */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button styling */
+button {
+  cursor: pointer;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
