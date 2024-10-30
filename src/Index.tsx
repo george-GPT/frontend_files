@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import '/Index.css'; // Correct import path
+import './Index.css'; // Corrected import path
 
 const rootElement = document.getElementById('root') as HTMLElement;
 
