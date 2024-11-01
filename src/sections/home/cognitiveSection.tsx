@@ -1,5 +1,7 @@
 import React from "react";
-import { Grid, Typography, Box } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid2";
+import { Typography, Box } from "@mui/material";
 import {
   Memory,
   Visibility,
@@ -23,44 +25,38 @@ import {
   Lightbulb,
 } from "@mui/icons-material";
 
+const Item = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.spacing(1),
+  padding: theme.spacing(2),
+  cursor: "pointer",
+  "&:hover": {
+    "& .MuiTypography-root": {
+      color: theme.palette.primary.main,
+      fontWeight: 700,
+    },
+    "& .MuiSvgIcon-root": {
+      color: theme.palette.primary.main,
+    },
+  },
+  color: theme.palette.primary.main,
+  "& .MuiSvgIcon-root": {
+    fontSize: "3.5rem",
+    color: theme.palette.primary.light,
+  },
+}));
+
 interface StyleItemProps {
   icon: React.ReactNode;
   text: string;
 }
 
 const StyleItem: React.FC<StyleItemProps> = ({ icon, text }) => (
-  <Box
-    sx={{
-      display: "flex",
-      alignItems: "center",
-
-      gap: 1,
-      mb: 2,
-      pl: 10,
-      cursor: "pointer",
-
-      "&:hover": {
-        "& .MuiTypography-root": {
-          color: "primary.500",
-          fontWeight: 700,
-        },
-
-        "& .MuiSvgIcon-root": {
-          color: "primary.500",
-        },
-      },
-      color: "primary.main",
-      "& .MuiSvgIcon-root": {
-        fontSize: "3.5rem",
-        color: "primary.300",
-      },
-    }}
-  >
+  <Item>
     {icon}
-    <Typography variant="body1" sx={{ color: "primary.300" }}>
-      {text}
-    </Typography>
-  </Box>
+    <Typography variant="body1">{text}</Typography>
+  </Item>
 );
 
 const CognitiveStylesGrid: React.FC = () => {
@@ -96,15 +92,11 @@ const CognitiveStylesGrid: React.FC = () => {
 
   return (
     <Box sx={{ maxWidth: 1200, margin: "auto", p: 4 }}>
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={4}>
+      <Grid container rowSpacing={4} columnSpacing={{ xs: 2, sm: 3, md: 4 }}>
+        <Grid size={{ sm: 12, md: 4 }}>
           <Typography
             variant="h2"
-            sx={{
-              color: "primary.dark",
-              mb: 4,
-              fontWeight: "bold",
-            }}
+            sx={{ color: "primary.dark", mb: 2, fontWeight: "bold" }}
           >
             Cognitive Profile
           </Typography>
@@ -113,14 +105,10 @@ const CognitiveStylesGrid: React.FC = () => {
           ))}
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ sm: 12, md: 4 }}>
           <Typography
             variant="h2"
-            sx={{
-              color: "primary.dark",
-              mb: 4,
-              fontWeight: "bold",
-            }}
+            sx={{ color: "primary.dark", mb: 2, fontWeight: "bold" }}
           >
             Learning Styles
           </Typography>
@@ -129,14 +117,10 @@ const CognitiveStylesGrid: React.FC = () => {
           ))}
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ sm: 12, md: 4 }}>
           <Typography
             variant="h2"
-            sx={{
-              color: "primary.dark",
-              mb: 4,
-              fontWeight: "bold",
-            }}
+            sx={{ color: "primary.dark", mb: 2, fontWeight: "bold" }}
           >
             Working Styles
           </Typography>

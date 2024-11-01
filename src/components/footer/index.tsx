@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  IconButton,
-  Link,
-} from "@mui/material";
+import { Box, Container, Typography, IconButton, Link } from "@mui/material";
+import Grid from "@mui/material/Grid2"; // Ensure you're using Grid2
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -25,9 +19,17 @@ const Footer: React.FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} justifyContent="center">
-          {/* Logo and Social Icons */}
-          <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
+        <Grid
+          container
+          rowSpacing={4}
+          columnSpacing={{ xs: 2, sm: 3, md: 4 }}
+          justifyContent="center"
+        >
+          <Grid
+            component="div"
+            size={{ xs: 12, md: 4 }}
+            sx={{ textAlign: "center" }}
+          >
             <BrainIconWhite sx={{ fontSize: 48, mb: 2 }} />
             <Box sx={{ mb: 2 }}>
               <IconButton
@@ -68,11 +70,9 @@ const Footer: React.FC = () => {
             </Typography>
           </Grid>
 
-          {/* Links Column */}
           <Grid
-            item
-            xs={12}
-            md={4}
+            component="div"
+            size={{ xs: 12, md: 4 }}
             sx={{ textAlign: { xs: "center", md: "left" } }}
           >
             <Typography variant="h6" sx={{ mb: 2 }}>
@@ -100,11 +100,9 @@ const Footer: React.FC = () => {
             </Box>
           </Grid>
 
-          {/* Resources Column */}
           <Grid
-            item
-            xs={12}
-            md={4}
+            component="div"
+            size={{ xs: 12, md: 4 }}
             sx={{ textAlign: { xs: "center", md: "left" } }}
           >
             <Typography variant="h6" sx={{ mb: 2 }}>
