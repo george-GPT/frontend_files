@@ -86,6 +86,8 @@ const Header: React.FC = () => {
                 px: highlight ? 2 : 0,
                 borderRadius: highlight ? "8px" : "none",
                 backgroundColor: highlight ? "primary.400" : "transparent",
+                boxShadow: highlight ? "0px 4.8px 4.8px 0px #00000014" : "none",
+                border: highlight ? "1px solid #7389ff" : "none",
                 "&:hover": {
                   color: "primary.200",
                   textDecoration: "none",

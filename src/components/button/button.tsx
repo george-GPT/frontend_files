@@ -63,6 +63,18 @@ export const Button: React.FC<ButtonProps> = ({
         backgroundColor: "#4ac473",
       },
     }),
+    ...(variant === "info" && {
+      backgroundColor: "primary.700",
+      color: "secondary.100",
+      borderRadius: "8px",
+      fontSize: "14px",
+      fontWeight: "500",
+      padding: "8px 20px",
+
+      "&:hover": {
+        backgroundColor: "primary.500",
+      },
+    }),
   });
 
   return (
