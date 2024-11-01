@@ -1,10 +1,8 @@
 // src/components/common/Button/Button.tsx
 import React from "react";
-import { Button as MuiButton, CircularProgress } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Button as MuiButton } from "@mui/material";
+
 import { ButtonProps } from "./type";
-import { Opacity } from "@mui/icons-material";
-import theme from "../../theme/theme";
 
 export const Button: React.FC<ButtonProps> = ({
   variant = "solid",

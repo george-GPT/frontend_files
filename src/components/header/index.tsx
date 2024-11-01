@@ -1,6 +1,6 @@
 // src/components/Header/Header.tsx
 import React from "react";
-import { AppBar, Box, Link, Toolbar, Stack } from "@mui/material";
+import { AppBar, Link, Toolbar, Stack } from "@mui/material";
 import Button from "../button/button";
 import BrainIcon from "../../asset/icon/brainIconwhite";
 
@@ -119,7 +119,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-const MobileMenu = () => {
-  return null;
-};

@@ -35,17 +35,6 @@ const LogoContainer = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(4),
 }));
 
-const SocialButton = styled(Button)(({ theme }) => ({
-  padding: theme.spacing(1.5),
-  borderColor: "secondary.300",
-  color: "secondary.600",
-  textTransform: "none",
-  "&:hover": {
-    borderColor: "secondary.400",
-    backgroundColor: "secondary.200",
-  },
-}));
-
 const DividerContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
