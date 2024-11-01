@@ -4,6 +4,7 @@ import { Button as MuiButton, CircularProgress } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { ButtonProps } from "./type";
 import { Opacity } from "@mui/icons-material";
+import theme from "../../theme/theme";
 
 export const Button: React.FC<ButtonProps> = ({
   variant = "solid",
@@ -66,26 +67,33 @@ export const Button: React.FC<ButtonProps> = ({
     ...(variant === "info" && {
       backgroundColor: "primary.700",
       color: "secondary.100",
-      borderRadius: "8px",
+      borderRadius: "20px",
       fontSize: "14px",
       fontWeight: "500",
-      padding: "8px 20px",
+      padding: "8px 18px",
 
       "&:hover": {
         backgroundColor: "primary.500",
       },
     }),
+    ...(variant === "action" && {
+      backgroundColor: "transparent",
+      color: "black",
+      borderRadius: "8px",
+      fontSize: "14px",
+      fontWeight: "500",
+      padding: "12px 18px",
+      border: `2px solid #D0D5DD`,
+      boxShadow: "0px 1.5px 3px 0px #1018280D",
+
+      "&:hover": {
+        backgroundColor: "secondary.200",
+      },
+    }),
   });
 
   return (
-    <MuiButton
-      {...props}
-      disabled={disabled || isLoading}
-      sx={buttonStyles}
-      startIcon={
-        isLoading ? <CircularProgress size={20} color="inherit" /> : undefined
-      }
-    >
+    <MuiButton {...props} disabled={disabled || isLoading} sx={buttonStyles}>
       {children}
     </MuiButton>
   );

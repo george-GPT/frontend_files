@@ -106,32 +106,12 @@ const Header: React.FC = () => {
             ml: "auto",
           }}
         >
-          <Button
-            variant="neutral"
-            sx={{
-              color: "white",
-              borderColor: "transparent",
-              "&:hover": {
-                borderColor: "transparent",
-                backgroundColor: "primary.400",
-              },
-            }}
-          >
-            Log In
-          </Button>
-          <Button
-            variant="primary"
-            sx={{
-              color: "white",
-              borderColor: "white",
-              "&:hover": {
-                borderColor: "white",
-                backgroundColor: "primary.400",
-              },
-            }}
-          >
-            Sign Up
-          </Button>
+          <Link href="/login">
+            <Button variant="neutral">Log In</Button>
+          </Link>
+          <Link href="/sign-up">
+            <Button variant="primary">Sign Up</Button>
+          </Link>
         </Stack>
       </Toolbar>
     </AppBar>

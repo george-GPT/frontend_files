@@ -7,7 +7,8 @@ export type ButtonVariant =
   | "primary"
   | "neutral"
   | "success"
-  | "info";
+  | "info"
+  | "action";
 
 export interface ButtonProps extends Omit<MuiButtonProps, "variant"> {
   variant?: ButtonVariant;
