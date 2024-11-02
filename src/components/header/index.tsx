@@ -99,13 +99,7 @@ const Header: React.FC = () => {
           ))}
         </Stack>
 
-        <Stack
-          direction="row"
-          spacing={1}
-          sx={{
-            ml: "auto",
-          }}
-        >
+        <Stack direction="row" spacing={1}>
           <Link href="/login">
             <Button variant="neutral">Log In</Button>
           </Link>
